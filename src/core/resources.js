@@ -55,7 +55,7 @@ const loadModels = (models, classInstance, onProgress) => {
         promises.push(
             new Promise((resolve, reject) => {
                 ModelLoader.load(
-                    path.resolve(ViewerLoader.assetsPath, modelPath),
+                    './' + path.resolve(ViewerLoader.assetsPath, modelPath),
                     (object) => {
                         loaded++;
 
@@ -106,7 +106,7 @@ const loadImage = (imgPath) => {
 
 const loadEnv = (mapsPath, onProgress) => {
     let promises = mapsPath.map((envMap, i) => {
-        return loadImage(path.resolve(ViewerLoader.assetsPath, envMap));
+        return loadImage('./' + path.resolve(ViewerLoader.assetsPath, envMap));
     });
 
     onProgress({
@@ -185,7 +185,7 @@ const loadTextures = (textures, onProgress) => {
         textureTypes = Object.keys(textures[textureName]);
         for(let textureType of textureTypes) {
 
-            let promise = loadImage(path.resolve(ViewerLoader.assetsPath, textures[textureName][textureType]))
+            let promise = loadImage('./' + path.resolve(ViewerLoader.assetsPath, textures[textureName][textureType]))
                 .then((image) => {
                     cache.textures[textureName][textureType] = new Texture(
                         image,
