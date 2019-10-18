@@ -1,6 +1,6 @@
 import ViewerLoader from './base';
 
-ViewerLoader.assetsPath = './assets';
+//ViewerLoader.assetsPath = './assets';
 
 const viewerLoader = new ViewerLoader();
 

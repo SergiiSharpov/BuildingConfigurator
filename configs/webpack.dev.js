@@ -10,9 +10,6 @@ module.exports = {
         filename: 'bundle.js',
         chunkFilename: 'bundle.chunk[id].js'
     },
-    devServer: {
-        publicPath: '/public'
-    },
     module: {
         rules: [
             {
@@ -71,12 +68,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
-            {
-                from: 'public/assets/**/*',
-                transformPath: (targetPath, absolutePath) => {
-                    return targetPath.replace('public', '');
-                },
-            },
+            'assets/**/*',
             'public/main.css',
         ]),
         new HtmlWebpackPlugin({

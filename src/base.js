@@ -3,7 +3,7 @@ import EventEmitter from "./core/EventEmitter";
 
 class ViewerLoader extends EventEmitter {
     // static chunksPath = './';
-    static assetsPath = './public/assets';
+    static assetsPath = './assets';
 
     load() {
         this.dispatch({type: VIEWER_LOAD_START});

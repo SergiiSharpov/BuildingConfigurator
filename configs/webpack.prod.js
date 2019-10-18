@@ -72,14 +72,11 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
-            {
-                from: 'public/assets/**/*',
-                transformPath: (targetPath, absolutePath) => {
-                    return targetPath.replace('public', '');
-                },
-            },
+            'assets/**/*',
             'public/main.css',
         ]),
-        new HtmlWebpackPlugin({template: './public/index.html'})
+        new HtmlWebpackPlugin({
+            template: './public/index.html'
+        })
     ]
 };
