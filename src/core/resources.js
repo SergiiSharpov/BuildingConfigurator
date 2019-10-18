@@ -211,7 +211,7 @@ const loadTextures = (textures, onProgress) => {
 };
 
 export const load = (onProgress = () => {}) => {
-    return fetch(path.resolve(ViewerLoader.assetsPath, 'resources.json'))
+    return fetch('./' + path.resolve(ViewerLoader.assetsPath, 'resources.json'))
         .then((response) => response.json())
         .then((data) => {
             return loadEnv(data.maps.env, onProgress)
