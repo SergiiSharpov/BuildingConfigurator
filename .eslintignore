@@ -1,0 +1,9 @@
+/docs
+/test
+/node_modules
+/esdoc-plugins
+/examples
+/assets
+/build
+/src/helpers
+/*.js

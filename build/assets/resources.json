@@ -1,0 +1,127 @@
+{
+  "maps": {
+    "env": [
+      "env/posx.jpg",
+      "env/negx.jpg",
+      "env/posy.jpg",
+      "env/negy.jpg",
+      "env/posz.jpg",
+      "env/negz.jpg"
+    ],
+    "textures": {
+      "Plane": {
+        "diffuse": "textures/Plane/Plane_BaseColor.jpg",
+        "normal": "textures/Plane/Plane_Normal.jpg",
+        "roughness": "textures/Plane/Plane_Roughness.jpg"
+      },
+      "TerracottaTiles": {
+        "diffuse": "textures/TerracottaTiles/Terracotta_Tiles_002_Base_Color.jpg",
+        "normal": "textures/TerracottaTiles/Terracotta_Tiles_002_Normal.jpg",
+        "roughness": "textures/TerracottaTiles/Terracotta_Tiles_002_Roughness.jpg"
+      },
+      "StoneFloor": {
+        "diffuse": "textures/StoneFloor/Stone_Floor_003_COLOR.jpg",
+        "normal": "textures/StoneFloor/Stone_Floor_003_NORM.jpg",
+        "roughness": "textures/StoneFloor/Stone_Floor_003_ROUGH.jpg"
+      },
+      "ShinglesAsphalt": {
+        "diffuse": "textures/ShinglesAsphalt/Shingles_Asphalt_002_baseColor.jpg",
+        "normal": "textures/ShinglesAsphalt/Shingles_Asphalt_002_normal.jpg",
+        "roughness": "textures/ShinglesAsphalt/Shingles_Asphalt_002_roughness.jpg"
+      },
+      "asphalt002": {
+        "diffuse": "textures/asphalt002/asphalt002_basecolor.jpg",
+        "normal": "textures/asphalt002/asphalt002_normal.jpg",
+        "roughness": "textures/asphalt002/asphalt002_roughness.jpg"
+      },
+      "stone003": {
+        "diffuse": "textures/stone003/stone003_basecolor.jpg",
+        "normal": "textures/stone003/stone003_normal.jpg",
+        "roughness": "textures/stone003/stone003_roughness.jpg"
+      },
+      "fine_wood": {
+        "diffuse": "textures/fine_wood/fine_wood_basecolor.jpg",
+        "normal": "textures/fine_wood/fine_wood_normal.jpg",
+        "roughness": "textures/fine_wood/fine_wood_roughness.jpg"
+      },
+      "wood003": {
+        "diffuse": "textures/wood003/wood003_basecolor.jpg",
+        "normal": "textures/wood003/wood003_normal.jpg",
+        "roughness": "textures/wood003/wood003_roughness.jpg"
+      },
+      "wood001": {
+        "diffuse": "textures/wood001/wood001_basecolor.jpg",
+        "normal": "textures/wood001/wood001_normal.jpg",
+        "roughness": "textures/wood001/wood001_roughness.jpg"
+      },
+      "slateflooring001": {
+        "diffuse": "textures/slateflooring001/slateflooring001_basecolor.jpg",
+        "normal": "textures/slateflooring001/slateflooring001_normal.jpg",
+        "roughness": "textures/slateflooring001/slateflooring001_roughness.jpg"
+      }
+    }
+  },
+  "materials": {
+    "slateflooring001": {
+      "maps": "slateflooring001",
+      "isMetal": false,
+      "isGlass": false,
+      "mapping": [0.0075, 0.005]
+    },
+    "fine_wood": {
+      "maps": "fine_wood",
+      "isMetal": false,
+      "isGlass": false,
+      "mapping": [0.007, 0.007]
+    },
+    "asphalt002": {
+      "maps": "asphalt002",
+      "isMetal": false,
+      "isGlass": false,
+      "mapping": [0.005, 0.005]
+    },
+    "DefaultWall": {
+      "maps": "TerracottaTiles",
+      "isMetal": false,
+      "isGlass": false,
+      "color": "#88aaff",
+      "mapping": [0.0052, 0.005]
+    },
+    "DefaultFloor": {
+      "maps": "Plane",
+      "isMetal": false,
+      "isGlass": false,
+      "mapping": [0.005, 0.005]
+    },
+    "DefaultPlastic": {
+      "maps": null,
+      "isMetal": false,
+      "isGlass": false,
+      "color": "#a0a0a8",
+      "mapping": [0.005, 0.005]
+    },
+    "DefaultGlass": {
+      "maps": null,
+      "isMetal": false,
+      "isGlass": true,
+      "color": "#808094",
+      "mapping": [1, 1]
+    },
+    "DefaultGround": {
+      "maps": "stone003",
+      "isMetal": false,
+      "isGlass": false,
+      "mapping": [0.01, 0.01]
+    }
+  },
+  "models": {
+    "windows": {
+      "Window1": "models/Window_1.obj",
+      "Window2": "models/Window_2.obj",
+      "Window3": "models/Window_3.obj",
+      "Door1": "models/Door_1.obj",
+      "Door2": "models/Door_2.obj",
+      "Door3": "models/Door_3.obj"
+    }
+  }
+}

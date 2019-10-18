@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<div class="loader">
+    <div class="spinner-box">
+        <div class="configure-border-1">
+            <div class="configure-core"></div>
+        </div>
+        <div class="configure-border-2">
+            <div class="configure-core"></div>
+        </div>
+    </div>
+    <h1 class="loader-text"></h1>
+</div>
+
+<div class="panel">
+    <div class="bar">
+        <button class="bar-item tablink" onclick="openTab(event, 'items')">Items</button>
+        <button class="bar-item tablink" onclick="openTab(event, 'walls')">Walls</button>
+        <button class="bar-item tablink" onclick="openTab(event, 'roofs')">Roofs</button>
+        <button class="bar-item tablink" onclick="openTab(event, 'building')">Building</button>
+        <button class="bar-item tablink" onclick="openTab(event, 'editlevels')">Levels</button>
+        <button class="bar-item tablink" onclick="openTab(event, 'plan')">Plan</button>
+    </div>
+
+    <div class="container" id="items">
+        <div class="container-item" data-id="Window1" draggable="true">Window 1</div>
+        <div class="container-item" data-id="Window2" draggable="true">Window 2</div>
+        <div class="container-item" data-id="Window3" draggable="true">Window 3</div>
+        <div class="container-item" data-id="Door1" draggable="true">Door 1</div>
+        <div class="container-item" data-id="Door2" draggable="true">Door 2</div>
+        <div class="container-item" data-id="Door3" draggable="true">Door 3</div>
+    </div>
+
+    <div class="container" id="walls" style="display:none">
+        <div class="container-item" data-id="DefaultWall" draggable="true">
+            <img src="./assets/textures/TerracottaTiles/Terracotta_Tiles_002_Base_Color.jpg">
+        </div>
+        <div class="container-item" data-id="fine_wood" draggable="true">
+            <img src="./assets/textures/fine_wood/fine_wood_basecolor.jpg">
+        </div>
+        <div class="container-item" data-id="slateflooring001" draggable="true">
+            <img src="./assets/textures/slateflooring001/slateflooring001_basecolor.jpg">
+        </div>
+    </div>
+
+    <div class="container" id="roofs" style="display:none">
+        <div class="container-item" data-id="DefaultFloor">
+            <img src="./assets/textures/Plane/Plane_BaseColor.jpg">
+        </div>
+        <div class="container-item" data-id="asphalt002">
+            <img src="./assets/textures/asphalt002/asphalt002_basecolor.jpg">
+        </div>
+        <div class="container-item" data-id="slateflooring001">
+            <img src="./assets/textures/slateflooring001/slateflooring001_basecolor.jpg">
+        </div>
+    </div>
+
+    <div class="container" id="building" style="display:none">
+        <div class="form-element">
+            <label for="width">Width</label>
+            <input id="width" type="number" min="4" placeholder="ft.">
+        </div>
+
+        <div class="form-element">
+            <label for="depth">Depth</label>
+            <input id="depth" type="number" min="4" placeholder="ft.">
+        </div>
+
+        <div class="form-element">
+            <label for="height">Level height</label>
+            <input id="height" type="number" min="8" placeholder="ft.">
+        </div>
+
+        <div class="form-element">
+            <label for="levels">Levels</label>
+            <input id="levels" type="number" min="1" value="1">
+        </div>
+
+        <div class="form-element">
+            <button id="apply">Apply</button>
+        </div>
+
+    </div>
+
+    <div class="container" id="editlevels" style="display:none">
+        <div class="form-element">
+            <label for="selectmode">Stage selecting</label>
+            <button id="selectmode">Enable</button>
+        </div>
+
+        <div class="form-element">
+            <p>Selected level <b id="selectedlevel">-</b></p>
+        </div>
+
+        <div class="form-element">
+            <label for="targetheight">Level height</label>
+            <input id="targetheight" type="number" min="8" placeholder="ft.">
+        </div>
+    </div>
+
+    <div class="container" id="plan" style="display:none">
+        <div class="form-element">
+            <label for="targetlevel">Level</label>
+            <input id="targetlevel" type="number" min="0" value="0" placeholder="level number, where 0 is 1st level">
+        </div>
+
+        <div class="form-element">
+            <button id="getplan">Get plan</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function openTab(event, cityName) {
+        let i;
+        let x = document.getElementsByClassName("container");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+
+        let tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        event.currentTarget.className += " active";
+
+        document.getElementById(cityName).style.display = "flex";
+    }
+</script>
+</body>
+</html>
